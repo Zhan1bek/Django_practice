@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Update Todo</h2>
+    <form class="ui form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="ui blue button" type="submit">Update</button>
+    </form>
+    <a class="ui button" href="{% url 'index' %}">Cancel</a>
+{% endblock %}
